@@ -1,0 +1,8 @@
+/* pages/tel/tel.wxss */
+.navigateToInfo{
+  width: 500rpx;
+  height: 100rpx;
+  border: 1rpx solid red;
+  text-align: center;
+  line-height: 100rpx;
+}

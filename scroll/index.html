@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        *{
+            margin:0;
+            padding:0;
+        }
+        .li-bg{
+            float: left;
+            list-style: none;
+        }
+        li:nth-of-type(3n){
+            position: relative;
+            margin-right: 10px;
+        }
+     
+        .wrap {
+            display: inline-block;
+           position: relative;
+           overflow: hidden;
+        }
+        .dou {
+            position: absolute;
+            left:0;
+            bottom:0;
+        }
+        ul > li {
+            list-style: none;
+        
+        }
+        .wraps {
+            width: 300px;
+            height: 300px;
+            background-color: #eee;
+            margin:0 auto;
+        }
+        ul {
+            float: left;
+        }
+        .left,.right{
+            width: 145px;
+            height: 100%;
+        }
+        .json{
+            width: 800px;
+            height: 400px;
+            background-color: rgb(149, 204, 149);
+            margin: 0 auto;
+        }
+        .data1,.data2,.data3{
+            height: 130px;
+            overflow: hidden;
+        }
+    </style>
+</head>
+<body>
+    <div class="wrap">
+        <ul id="num-roll"></ul>
+        <span class="dou">,</span>
+    </div>
+    <div class="wraps">
+        <ul class='left'>
+            <li>1</li>
+            <li>2</li>
+            <li>3</li>
+            <li>4</li>
+            <li>5</li>
+        </ul>
+        <ul class="right">
+            <li>6</li>
+            <li>7</li>
+            <li>8</li>
+            <li>9</li>
+            <li>10</li>
+        </ul>
+    </div>
+
+    <div>
+        <span>倒计时</span><p class="time-new"></p>
+    </div>
+   
+
+<div class="json">
+    <div class="data1"></div>
+    <div class="data2"></div>
+    <div class="data3"></div>
+</div>
+</body>
+<script src="./js/jquery-1.9.1.min.js"></script>
+<script src="./js/digitroll.js"></script>
+<script src="./js/index.js"></script>
+</html>

@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <title>第三方登录---微信登录</title>
+</head>
+
+<body>
+
+  <div id="login_container">
+    这是装二维码的容器div
+  </div>
+  <script src="./jquery/jquery.min.js"></script>
+  <!-- <script src="http://res.wx.qq.com/connect/zh_CN/htmledition/js/wxLogin.js"></script> -->
+  <script type="text/javascript">
+    // //id和scope不用改、appid和redirect_uri改为自己的
+    // var obj = new WxLogin({
+    //   id: "login_container",
+    //   appid: "wx00873f550eb0308a",
+    //   scope: "snsapi_login",
+    //   redirect_uri: "http://www.og.skyblu.com",
+    //   state: "",
+    //   style: "black",
+    //   href: ""
+    // });
+
+  function render(url,data,callback){
+    var p = new Promise(function(resolve,reject){
+      $.ajax({
+        type:'get',
+        url:'',
+        data:{},
+        dataType:'json',
+        success:function(res){
+          resolve(data);
+          callback()
+        }
+      })
+    })
+    return p
+  } 
+
+
+    //拿到code
+    function firstAjax() {
+      $.ajax({
+        type: 'get',
+        // url: 'https://open.weixin.qq.com/connect/oauth2/authorize?appid=wxe776323aa35537b6&redirect_uri=http://www.baidu.com&response_type=code&scope=snsapi_login&state=123#wechat_redirect',
+        url: 'https://open.weixin.qq.com/connect/qrconnect?appid=AppID&redirect_uri=urlencode(https://www.baidu.com)&response_type=code&scope=snsapi_login&state=2014#wechat_redirect',
+        dataType: 'json',
+        success: function (res) {
+          console.log(res)
+          secondAjax(code);
+        },
+      })
+    }
+    //拿到access_toke
+    function secondAjax(code){
+      $.ajax({
+        type:'get',
+        url:'https://api.weixin.qq.com/sns/oauth2/access_token?appid=AppID&secret=AppSecret&code=00294221aeb06261d5966&grant_type=authorization_code',
+        dataType:'json',
+        success:function(res){
+          getUserinfo(access_toke);
+        }
+      })
+    }
+    // 拿到用户信息
+    function getUserinfo(data){
+      $.ajax({
+        type:'get',
+        url:'https://api.weixin.qq.com/sns/userinfo?access_token=bezXEiiBSKSxW0eoblIewFNHqAG-PyW9OqI_L81E4ZCi2cFpfoJTyQc0xKlPPCtqK1kLJfiRbVrpoOVLw7fjpqh52bn7C68SHa2HSgYsVPXZPvJvtayDa57-_7TeHYw&openid=o39YsbmuV_bIPGpj1MTe',
+        dataType:'json',
+        success:function(res){
+
+        }
+      })
+    }
+
+  </script>
+</body>
+
+</html>

@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+  <meta charset="UTF-8">
+  <title></title>
+  <link rel="stylesheet" href="lib/bootstrap/css/bootstrap.min.css">
+  <link rel="stylesheet" href="./lib/font/iconfont.css">
+  <link rel="stylesheet" href="css/common.css">
+</head>
+
+<body>
+
+  <!--侧边栏-->
+  <div class="lt_aside">
+    <div class="brand">
+      <a href="index.html">ecmoho Data</a>
+    </div>
+    <div class="nav">
+      <ul>
+        <li>
+          <a href="javascript:;">
+            <i class="iconfont icon-weibiaoti--"></i>
+            <span>商铺</span>
+          </a>
+        </li>
+        <li>
+          <a href="javascript:;">
+            <i class="iconfont icon-shangpin1"></i>
+            <span>商品</span>
+          </a>
+        </li>
+        <li>
+          <a href="javascript:;">
+            <i class="iconfont icon-das"></i>
+            <span>用户</span>
+          </a>
+          <!--二级分类-->
+          <div class="second" style="display: none">
+            <a href="first.html">用户资料</a>
+            <a href="second.html">用户画像</a>
+          </div>
+        </li>
+        <li>
+          <a href="javascript:;">
+            <i class="iconfont icon-shezhi1"></i>
+            <span>营销</span>
+          </a>
+        </li>
+        <li>
+          <a href="javascript:;">
+            <i class="iconfont icon-jinqian-"></i>
+            <span>交易</span>
+          </a>
+        </li>
+      </ul>
+    </div>
+  </div>
+  <!--主体区域-->
+  <div class="lt_main" id="app">
+    <div class="lt_header">
+      <a href="javascrpt:;" class="pull-left icon_menu"><i class="iconfont icon-liebiao"></i></a>
+      <div class="user pull-right">
+        <img src="./images/photo.jpg" alt="">
+        <span>小李，你好</span>
+        <a href="javascript:;" class="logout">退出</a>
+
+      </div>
+    </div>
+    <!-- 内容区域 -->
+    <div class="lt_content">
+      <div class="container-fluid">
+        <!-- card数据展示 -->
+        <div class="row">
+          <div class="col-xs-12 col-sm-6 col-lg-3">
+            <div class="card-wrap">
+              <div class="card-l">
+                <i class="iconfont icon-jiaoyi3" style="color:rgb(133, 177, 44)"></i>
+              </div>
+              <div class="card-r">
+                <span>访客数</span>
+                <span class="card-word">324</span>
+                <span class="card-img">
+                  <img src="./images/report-up.png" alt="">
+                </span>
+              </div>
+            </div>
+          </div>
+          <div class="col-xs-12 col-sm-6 col-lg-3">
+            <div class="card-wrap">
+              <div class="card-l">
+                <i class="iconfont icon-loudou" style="color:rgb(216, 163, 30)"></i>
+              </div>
+              <div class="card-r">
+                <span>支持转化率</span>
+                <span class="card-word">25%</span>
+                <span class="card-img">
+                  <img src="./images/report-down.png" alt="">
+                </span>
+              </div>
+            </div>
+          </div>
+          <div class="col-xs-12 col-sm-6 col-lg-3">
+            <div class="card-wrap">
+              <div class="card-l">
+                <i class="iconfont icon-jinqian" style="color: rgb(129, 172, 44)"></i>
+              </div>
+              <div class="card-r">
+                <span>客单价</span>
+                <span class="card-word">88</span>
+              </div>
+            </div>
+          </div>
+          <div class="col-xs-12 col-sm-6 col-lg-3">
+            <div class="card-wrap">
+              <div class="card-l">
+                <i class="iconfont icon-gouwuche1" style="color: rgb(209, 15, 15)"></i>
+              </div>
+              <div class="card-r">
+                <span>支付件数</span>
+                <span class="card-word">324</span>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+        <div class="row">
+          <!-- 趋势图 -->
+          <div class="col-xs-12 col-sm-8">
+            <div class="trend-l">
+              <div class="panel panel-default">
+                <div class="panel-heading">
+                  <i class="iconfont icon-qushi"></i>
+                  <span>趋势图</span>
+                </div>
+                <div class="panel-body">
+                  Panel content
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- 实时概况 -->
+          <div class="col-xs-12 col-sm-4">
+            <div class="trend-r">
+              <div class="panel panel-default">
+                <div class="panel-heading">
+                  <i class="iconfont icon-gaikuang"></i>
+                  <span>实时概况</span>
+                </div>
+                <ul class="list-group">
+                  <li class="list-group-item">
+                    <span class="trend-num">5665</span>
+                    <span class="trend-title">支付余额</span>
+                  </li>
+                  <li class="list-group-item">
+                    <span class="trend-num">5665</span>
+                    <span class="trend-title">支付买家数</span>
+                  </li>
+                  <li class="list-group-item">
+                    <span class="trend-num">5665</span>
+                    <span class="trend-title">浏览量</span>
+                  </li>
+                  <li class="list-group-item">
+                    <span class="trend-num">5665</span>
+                    <span class="trend-title">支付子订单数</span>
+                  </li>
+                  <li class="list-group-item">
+                    <span class="trend-num">5665</span>
+                    <span class="trend-title">加购人数</span>
+                  </li>
+                  <li class="list-group-item">
+                    <span class="trend-num">5665</span>
+                    <span class="trend-title">成功退款金额</span>
+                  </li>
+                </ul>
+              </div>
+            </div> 
+          </div>
+        </div>
+        <!--整体看板-->
+        <div class="row">
+          <div class="col-xs-12">
+              <div class="table-name">
+                <i class="iconfont icon-thumbnail"></i>
+                  <span>整体面板</span>
+              </div>
+              <div class="table-responsive">
+                <table class="table table-bordered table-hover table-condensed">
+                  <thead>
+                    <tr>
+                      <th>支付金额</th>
+                      <th>支付转化率</th>
+                      <th>客单价</th>
+                      <th>支付买家数</th>
+                      <th>支付老买家数</th>
+                      <th>支付件数</th>
+                      <th>支付子订单数</th>
+                      <th>浏览量</th>
+                      <th>加购人数</th>
+                      <th>商品收藏人数</th>
+                      <th>直通车消耗</th>
+                      <th>钻石展位消耗</th>
+                      <th>淘宝客佣金</th>
+                      <th>成功退款金额</th>
+                      <th>日期</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <!-- <tr>
+                      <td>Trident</td>
+                      <td>Internet 4.0</td>
+                      <td>Win 95 +</td>
+                      <td>4</td>
+                      <td>5</td>
+                      <td>6</td>
+                      <td>7</td>
+                      <td>8</td>
+                      <td>9</td>
+                      <td>5</td>
+                      <td>6</td>
+                      <td>7</td>
+                      <td>8</td>
+                      <td>9</td>
+                      <td>9</td>
+                    </tr> -->
+                  </tbody>
+                </table>
+              </div>
+          </div>
+        </div>
+      </div>
+
+
+
+    </div>
+
+  </div>
+
+  <!--退出模态框-->
+  <div class="modal fade" tabindex="-1" id="logoutModal">
+    <div class="modal-dialog modal-sm">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal"><span>&times;</span></button>
+          <h4 class="modal-title">温馨提示</h4>
+        </div>
+        <div class="modal-body">
+          <p class="text-danger"><span class="glyphicon glyphicon-info-sign"></span>您确定要退出吗？</p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
+          <button type="button" class="btn btn-primary btn_logout">退出</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script type=text/html id="tpl">
+    {{ each res v i }}
+      <tr>
+        <td>{{ v.payAmt }}</td>
+        <td>{{ v.payRate }}</td>
+        <td>{{ v.payPct }}</td>
+        <td>{{ v.payByrCnt }}</td>
+        <td>{{ v.payOldByrCnt }}</td>
+        <td>{{ v.payItmCnt }}</td>
+        <td>{{ v.payOrdCnt }}</td>
+        <td>{{ v.pv }}</td>
+        <td>{{ v.cartByrCnt }}</td>
+        <td>{{ v.cltItmCnt }}</td>
+        <td>{{ v.p4pExpendAmt }}</td>
+        <td>{{ v.zzExpendAmt }}</td>
+        <td>{{ v.tkExpendAmt }}</td>
+        <td>{{ v.rfdSucAmt }}</td>
+        <td>{{ v.time }}</td>
+      </tr>
+    {{ /each }}
+  </script>
+  <script src="lib/require/require.js"></script>
+  <script src="js/common.js"></script>
+  <script src="js/index.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,5 @@
+这个获取手机号不支持个人的appid，然后一开始在电脑上点击的时候会报
+错（报错内容：getPhoneNumber:fail 用户绑定的手机需要进行验证，请在客户端完成短信验证步骤）
+要先在手机上跑一边，才可以在电脑上跑出来
+
+只需要设置button按钮中的open-type="getPhoneNumber" 

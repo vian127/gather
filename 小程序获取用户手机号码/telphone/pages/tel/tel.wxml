@@ -1,0 +1,4 @@
+<!--pages/tel/tel.wxml-->
+<view class='navigateToInfo' catchtap='navigateToInfo'>
+  <button open-type="getPhoneNumber" bindgetphonenumber="getPhoneNumber">点下授权获取手机号码</button>
+</view>

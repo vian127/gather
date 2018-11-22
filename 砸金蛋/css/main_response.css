@@ -1,0 +1,34 @@
+/**
+	Created by feng on 2018-11-19
+*/
+
+ @media screen and (max-width:768px){
+	.goldContent{
+		width: 100%!important;
+	}
+}
+
+@media screen and (max-width:360px){
+	.chouJiang{
+		width: 98%!important;
+	}
+
+	.jiangPinResult{
+		width: 98%!important;
+	}
+
+	.inputInfo{
+		width: 98%!important;
+	}
+}
+
+
+@media screen and (min-width:768px) {
+    body .goldContent .list_Content.rulesActivity .list_Rules i.right_img{
+		background-position: bottom;
+	}
+
+	.goldContent{
+		width: 768px!important;
+	}
+}

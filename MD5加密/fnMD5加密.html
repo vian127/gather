@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <h3>函数封装的md5</h3>
+<script src="./fnmd5.js"></script>
+<script>
+    function render(){
+        var t = parseInt(new Date().getTime()/1000)+'';
+        var str_t = t.substring(0,t.length-2);
+        var key1="老夫聊发少年狂，左牵黄，右擎苍，锦帽貂裘,千骑卷平冈";
+        var key2="会挽雕弓如满月，西北望，射天狼";
+       
+        var num = +t.substr(-3,1)+1;
+        var data = str_t + key1.slice(num) + key2.slice(num);
+        var result = md5(data);
+        console.log(result)
+    }
+        
+</script>
+</body>
+</html>
