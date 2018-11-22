@@ -1,0 +1,20 @@
+/* 内容 */
+.lt_content{margin: 15px;}
+.card-wrap {display: flex;height: 80px;line-height: 80px;text-align: center;margin-bottom: 20px;background-color: #fff;border: 1px solid #ccc;border-radius: 5px;}
+.card-l{flex: 3;border-right: 1px solid #ccc;}
+.card-r{flex: 7;}
+.card-word {display: inline-block;font-size: 36px;font-weight: bold;}
+.card-img img {vertical-align: 5%;}
+.card-l i {font-size: 30px;}
+/* 趋势图 */
+.panel-default>.panel-heading {background:url('../images/header-bg.png') repeat-x center;border-radius: 5px 5px 0 0 ;}
+.trend-l .panel-body,.trend-r .list-group {height: 245px;overflow: hidden;}
+.trend-l i,.trend-r i {padding-right: 5px;font-size: 20px;color: #fff;}
+.trend-l span,.trend-r .panel-heading span,.table-name span{font-size: 14px;color: #20c997;}
+.trend-num{display: inline-block;width: 10%;text-align: right;}
+.trend-title {padding-left: 10px;}
+/* 表格 */
+.table-name{width: 100%;height: 41px;border-radius: 5px 5px 0 0;background:url('../images/header-bg.png') repeat-x center;}
+.table.table-bordered td,.table.table-bordered th {text-align: center;vertical-align: middle;}
+.table-name {font-size: 16px;line-height: 41px;padding-left: 15px;color: #fff;}
+.trend-l .panel-heading,.trend-r .panel-heading {padding: 6px 15px;}
