@@ -25,7 +25,7 @@
               <i class="iconfont icon-jiantou1 pull-right icon_rotate" :class="{'icon_now':isShow}"></i>
             </a>
             <!--二级分类-->
-            <div class="second" v-show="isShow">
+            <div class="second" :class="{'now':isShow}">
               <a href="javascript:void(0);">用户资料</a>
               <a href="javascript:void(0);">用户画像</a>
             </div>
@@ -39,6 +39,7 @@
           <li>
             <a href="javascript:;">
               <i class="iconfont icon-jinqian-"></i>
+              <span>交易</span>
             </a>
           </li>
         </ul>
@@ -142,10 +143,15 @@ export default {
       -o-transform: rotate(-180deg);
     }
     .second {
-      transition: all 1s linear;
+      transition: all .3s linear;
+      height: 0;
+      overflow: hidden;
       background: #2a3948;
       a {
         padding-left: 60px;
+      }
+      &.now{
+        height: 108px;
       }
     }
   }
