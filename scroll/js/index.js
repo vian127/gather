@@ -365,7 +365,7 @@ $(function () {
             },
         ];
     })()
-
+    //时间倒计时 
     ;(function () {
         function clockon() {
             var now = new Date();
@@ -390,9 +390,9 @@ $(function () {
         lastTime();
         function lastTime() {
             var newsTime = new Date().getTime(); //当前时间
-            var deadLine = new Date('2018-11-15 02:29:00').getTime(); //最终时间
+            var deadLine = new Date('2020-11-15 02:29:00').getTime(); //最终时间
             if (newsTime >= deadLine) {
-                $(".time-new").text('2018-11-11 02:29:00');
+                $(".time-new").text('2020-11-11 02:29:00');
                 clearInterval(tirme);
             } else {
                 clockon();
@@ -1245,6 +1245,12 @@ $(function () {
         })
         $('.data3').append(str2);
         console.log(ages)
+    })()
+
+    ;(function(){
+        var set = new Set([1,2,3,4,5,2,5,3]);
+        var result = [...set];
+        console.log(result); //[1,2,3,4,5]
     })()
 
 })

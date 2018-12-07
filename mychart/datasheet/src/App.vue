@@ -2,7 +2,7 @@
   <div id="app">
     <div class="lt_aside" :class="{'now':isNow}">
       <div class="brand">
-        <a href="javascript">ecmoho Data</a>
+        <router-link to="/home">ecmoho Data</router-link>
       </div>
       <div class="nav">
         <ul>
