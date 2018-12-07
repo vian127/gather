@@ -11,6 +11,15 @@ import 'bootstrap/dist/css/bootstrap.min.css'
 import './assets/font/iconfont.css'
 import './assets/css/commons.css'
 
+
+import {Button} from 'element-ui';
+Vue.component(Button.name, Button);
+// Vue.component(Layout.name, Layout);
+
+
+
+
+
 Vue.config.productionTip = false
 
 /* eslint-disable no-new */

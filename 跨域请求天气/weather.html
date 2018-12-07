@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>跨域</title>
+</head>
+<style>
+    *{
+        margin: 0;
+        padding: 0;
+    }
+    .wrap {
+        width: 800px;
+        height: 100%;
+        margin: 0 auto;
+    }
+   
+    td{
+        padding: 5px;
+    }
+</style>
+<body>
+    <div class="wrap">
+        <button>获取天气</button>
+        <div class="info"></div>
+    </div>
+    
+
+    <script src="./jquery/jquery.min.js"></script>
+    <script>
+        //点击按钮，获取天气信息，渲染在页面上
+        // http://api.map.baidu.com/telematics/v3/weather?location=北京
+        //&output=json&ak=E4805d16520de693a3fe707cdc962045
+
+        $('button').click(function(){
+           $.ajax({
+            type:"get",
+            url:"http://api.map.baidu.com/telematics/v3/weather",
+            data:{
+                ak:'zVo5SStav7IUiVON0kuCogecm87lonOj',
+                location:'上海',
+                output:'json'
+            },
+            dataType:'jsonp', //jsonp解决跨域 
+            success:function(info){
+                console.log(info)
+                var str = '';
+                info=info.results[0].weather_data;
+               $.each(info,function(i,v){
+                  str +='<tr>'+
+                            '<td>'+ v.date +'</td>'+
+                            '<td>'+ v.temperature +'</td>'+
+                            '<td>'+ v.weather +'</td>'+
+                            '<td>'+ v.wind +'</td>'+
+                            '<td><img src="'+v.dayPictureUrl +'">'+'</td>'+
+                            '<td><img src="'+v.nightPictureUrl +'">'+'</td>'+
+                        '</tr>'
+               })
+               $('.info').html(str);
+            }
+           })
+        });
+    </script>
+</body>
+</html>

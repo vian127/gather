@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <p class="showtime" style="font-size:20px;font-weight: bold">123</p>
+</body>
+<script>
+    clock()
+    function clock(){
+        var times = new Date().getTime()/1000;
+        var day = Math.floor(times/(60*60*24));  //天数
+        var hour = Math.floor(times/(60*60)) - (day*24); //小时
+        var minute = Math.floor(times/60) - day*24*60 - hour*60; //分钟
+        var second = Math.floor(times)-day*24*60*60 - hour*60*60 - minute*60
+        // 另外一种写法
+        // var day1= parseInt(times/(60*60*24));
+        // var hour1= parseInt(times/3600)%24;
+        // var minute1 = parseInt(times/60)%60;
+        // var second1= parseInt(times)%60;
+        // console.log(day1,hour1,minute1,second1)
+        day = day<10?'0'+day:day;
+        hour = hour<10?'0'+hour:hour;
+        minute = minute<10?'0'+minute:minute;
+        second = second<10?'0'+second:second
+        var time = '';
+        var showTime = document.getElementsByClassName('showtime')[0];
+        time = day +'天'+ hour+'时'+ minute+'分'+ second+'秒';
+        showTime.innerHTML= time;
+    }
+    setInterval(clock,1000);
+</script>
+</html>

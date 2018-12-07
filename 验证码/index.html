@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <style type="text/css">
+        div {
+            width: 200px;
+            height: 30px;
+            overflow: hidden;
+            position: relative;
+        }
+
+        #input {
+            width: 200px;
+            height: 30px;
+            box-sizing: border-box;
+            padding-right: 85px;
+        }
+
+        .code {
+            position: absolute;
+            right: 0;
+            top: 0;
+            width: 80px;
+            height: 30px;
+            line-height: 30px;
+            text-align: center;
+            font-weight: bold;
+            border: 0;
+            outline: none;
+            letter-spacing: 3px;
+            background-color: rgba(0, 247, 255, 0.555);
+            color: rgba(255, 0, 221, 0.527);
+        }
+    </style>
+    <script src="jquery/jquery.min.js"></script>
+    </script>
+</head>
+
+<body>
+    <div>
+        <input type="text" id="input">
+        <input type="button" id="checkCode" class="code">
+    </div>
+    <input type="button" class='btn' value="验证">
+</body>
+
+<script>
+    $(function () {
+        var code = "";
+        createCode();
+
+        $('.code').on('click',function(){
+            createCode();
+        })
+        $('.btn').on('click',function(){
+            validate();
+        })
+
+        //随机生成验证码
+        function createCode() {
+            code = "";
+            var codeLength = 5; //验证码的长度   
+            var random = new Array(0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 'A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I',
+                'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z'); //随机数   
+            for (var i = 0; i < codeLength; i++) { 
+                var charIndex = Math.floor(Math.random() * 36); //取得随机数的索引   
+                code += random[charIndex]; //根据索引取得随机数加到code上  
+            }
+            $('.code').val(code) 
+        }
+
+        // 校验验证码
+        function validate() {
+            var inputCode = $('#input').val().toUpperCase(); //取得输入的验证码并转化为大写         
+            if (inputCode.length <= 0) {  
+                alert("请输入验证码！");  
+            } else if (inputCode != code) {    
+                alert("验证码输入错误！"); 
+                $('#input').val('');
+                createCode(); 
+            } else { 
+                alert("验证成功");
+            }
+        }
+    })
+</script>
+
+</html>
