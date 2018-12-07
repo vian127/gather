@@ -12,9 +12,8 @@ import './assets/font/iconfont.css'
 import './assets/css/commons.css'
 
 
-import {Button} from 'element-ui';
-Vue.component(Button.name, Button);
-// Vue.component(Layout.name, Layout);
+import Element from 'element-ui';
+Vue.use(Element);
 
 
 
